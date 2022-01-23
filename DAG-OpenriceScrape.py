@@ -25,8 +25,7 @@ def callable_virtualenv(ts):
 
     soup = BS4(rp.text, 'html.parser')
     # print(soup.prettify())
-    ul = \
-    soup.find_all("ul", class_="sr1-listing-content-cells pois-restaurant-list js-poi-list-content-cell-container")[0]
+    ul = soup.find_all("ul", class_="sr1-listing-content-cells pois-restaurant-list js-poi-list-content-cell-container")[0]
     lis = ul.select("li.sr1-listing-content-cell")
     temp = []
     for li in lis:
